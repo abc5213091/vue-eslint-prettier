@@ -1,0 +1,46 @@
+{
+    "name": "vue-eslint-prettier",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "lint-staged"
+    },
+    "dependencies": {
+        "babel-eslint": "^10.1.0",
+        "core-js": "^3.6.5",
+        "element-ui": "^2.13.2",
+        "husky": "^4.2.5",
+        "lint-staged": "^8.1.7",
+        "pre-commit": "^1.2.2",
+        "vue": "^2.6.11",
+        "vue-router": "^3.2.0",
+        "vuex": "^3.4.0"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^4.4.0",
+        "@vue/cli-service": "^4.4.0",
+        "vue-template-compiler": "^2.6.11",
+        "eslint": "^5.14.0",
+        "eslint-config-prettier": "^4.0.0",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-prettier": "^3.0.0",
+        "eslint-plugin-vue": "5.2.0",
+        "prettier": "^1.16.0",
+        "prettier-eslint": "^8.8.2",
+        "node-sass": "^4.12.0",
+        "sass-loader": "^7.1.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,vue}": [
+            "eslint --fix",
+            "git add"
+        ]
+    }
+}
